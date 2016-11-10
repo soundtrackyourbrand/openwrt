@@ -93,7 +93,7 @@ define Device/wrh-300cr
   IMAGE_SIZE := $(ralink_default_fw_size_16M)
   IMAGES += factory.bin
   IMAGE/factory.bin := $$(IMAGE/sysupgrade.bin) | elecom-header
-  DEVICE_TITLE := Elecom WRH-300CR 
+  DEVICE_TITLE := Elecom WRH-300CR
   DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci
 endef
 TARGET_DEVICES += wrh-300cr
@@ -253,7 +253,7 @@ TARGET_DEVICES += hc5661
 define Device/hc5761
   DTS := HC5761
   IMAGE_SIZE := $(ralink_default_fw_size_16M)
-  DEVICE_TITLE := HiWiFi HC5761 
+  DEVICE_TITLE := HiWiFi HC5761
   DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci kmod-sdhci kmod-sdhci-mt7620 kmod-ledtrig-usbdev
 endef
 TARGET_DEVICES += hc5761
@@ -395,7 +395,7 @@ define Device/zbt-we826
   DTS := ZBT-WE826
   IMAGE_SIZE := $(ralink_default_fw_size_16M)
   DEVICE_TITLE := Zbtlink ZBT-WE826
-  DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci kmod-mt76 kmod-sdhci-mt7620 
+  DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci kmod-mt76 kmod-sdhci-mt7620
 endef
 TARGET_DEVICES += zbt-we826
 
@@ -413,3 +413,11 @@ define Device/tiny-ac
   DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci
 endef
 TARGET_DEVICES += tiny-ac
+
+define Device/qino-398
+  DTS := QINO-398
+  IMAGE_SIZE := $(ralink_default_fw_size_16M)
+  DEVICE_TITLE := Qino-398
+  DEVICE_PACKAGES := kmod-usb2 kmod-usb-ohci kmod-mt76 kmod-sdhci-mt7620
+endef
+TARGET_DEVICES = qino-398
